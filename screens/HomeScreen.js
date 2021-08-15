@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { Image, SafeAreaView, StyleSheet, View } from 'react-native';
+import { Image, SafeAreaView, StatusBar, StyleSheet, View } from 'react-native';
 import NavOptions from '../components/NavOptions';
 
 
@@ -9,8 +9,9 @@ function HomeScreen() {
       <SafeAreaView>
 
          <View  >
+            <StatusBar />
             <Image
-               style={{ ...style.logoStyle, ...{ marginLeft: 20 } }}
+               style={{ ...style.logoStyle, ...{ marginLeft: 20, marginTop: -15 } }}
                source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/c/cc/Uber_logo_2018.png' }}
             />
 

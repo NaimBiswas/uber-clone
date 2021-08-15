@@ -18,6 +18,7 @@ import { Provider } from 'react-redux';
 import HomeScreen from './screens/HomeScreen';
 import store from './store/store';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import SplashSCreen from './screens/SplashSCreen';
 
 const App = () => {
 
@@ -25,7 +26,8 @@ const App = () => {
       <Provider store={store}>
          <SafeAreaProvider>
             <View>
-               <HomeScreen />
+               <SplashSCreen />
+               {/* <HomeScreen /> */}
             </View>
          </SafeAreaProvider>
       </Provider>
