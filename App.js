@@ -10,25 +10,25 @@
 import React from 'react';
 
 import {
-   SafeAreaView,
-   ScrollView,
-   StatusBar,
    StyleSheet,
    Text,
-   useColorScheme,
    View,
 } from 'react-native';
-
-
+import { Provider } from 'react-redux';
+import HomeScreen from './screens/HomeScreen';
+import store from './store/store';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 const App = () => {
 
    return (
-      <View>
-         <Text>
-            Uber Clone
-        </Text>
-      </View>
+      <Provider store={store}>
+         <SafeAreaProvider>
+            <View>
+               <HomeScreen />
+            </View>
+         </SafeAreaProvider>
+      </Provider>
    );
 };
 
